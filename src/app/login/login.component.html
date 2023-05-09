@@ -1,0 +1,34 @@
+<div class="body">
+    <div class="wrapper login">
+        <div class="container">
+            <div class="col-left">
+                <div class="login-text">
+                    <h2>Welcome!</h2>
+                    <p>Create your account<br>For free !</p> <a href="" routerLink="register" class="btn">Sign Up</a>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="login-form">
+                    <h2>SignIn</h2>
+                    <form action="" [formGroup]="loginForm" (ngSubmit)="savelogin()">
+                        <div>
+                            <label>Username<span>*</span></label>
+                            <input type="text" placeholder="Username" required formControlName="username">
+                            <div class="form-text text-danger" *ngIf="username?.touched && username?.invalid">enter valid username</div>
+                        </div>
+                        <div> 
+                            <label>Password<span>*</span></label>
+                            <input type="password" placeholder="Password" required formControlName="password"> 
+                            <div class="form-text text-danger" *ngIf="password?.touched && password?.invalid">enter valid username</div>
+                        </div>
+                        <p>
+                            <input type="submit" [disabled]="loginForm.invalid" value="Sign In">
+                        </p>
+                        <p> <a href="">Forgot password?</a> </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
