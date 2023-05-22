@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cakeBox';
+  isAuthenticated=false
+  constructor(){
+    if("token" in localStorage){
+      this.isAuthenticated=true
+    }
+  }
 }

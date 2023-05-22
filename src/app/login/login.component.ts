@@ -22,8 +22,8 @@ export class LoginComponent {
   savelogin(){
     if(this.loginForm.valid){
       let formData=this.loginForm.value
-      this.service.getToken(formData).subscribe((res:any)=>localStorage.setItem("token",res.token))
-      
+      this.service.getToken(formData).subscribe((res:any)=>localStorage.setItem("token","Token "+res.token))
+      this.router.navigateByUrl("cakes")
       
     }
   }

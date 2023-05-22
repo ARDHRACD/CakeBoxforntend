@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CakelistComponent } from './cakelist/cakelist.component';
+import { CakedetailComponent } from './cakedetail/cakedetail.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarComponent,
+    CakelistComponent,
+    CakedetailComponent
   ],
   imports: [
     BrowserModule,
